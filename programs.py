@@ -7,6 +7,7 @@ import calendar
 import random
 import wikipedia
 from selenium import webdriver
+from playsound import playsound
 
 
 warnings.filterwarnings('ignore')
@@ -42,7 +43,7 @@ def assistant_response(text):
 
     myobj.save('assistant_response.wav')
 
-    os.system('mpg321 -q assistant_response.wav')
+    playsound('assistant_response.wav')
 
 
 # Function for wake word
