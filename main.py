@@ -51,7 +51,7 @@ while True:
         if 'google search' in text.lower() or 'find information about' in text.lower():
             search_google = str(get_html_search(text))
             # create webdriver object
-            driver = webdriver.Chrome()
+            driver = webdriver.Chrome('/Users/jarvis/Downloads/chromedriver')
             # get google.co.in
             driver.get("https://google.co.in/search?q=" + search_google)
             try:
@@ -79,7 +79,7 @@ while True:
                           'ninth': 8,
                           'tenth': 9}
 
-            driver = webdriver.Chrome()
+            driver = webdriver.Chrome('/Users/jarvis/Downloads/chromedriver')
             driver.get(searches[dictionary[further]])
         if 'kill present search' in text.lower():
             response = 'All the present searches has been ended.'
@@ -88,7 +88,7 @@ while True:
             response = 'Okay. Awaiting for my next call. Till then STAY SAFE JAI HIND JAI BHARAT'
             assistant_response(response)
             break
-        if 'show searches' in text.lower():
+        if 'shows searches' or 'show searches' in text.lower():
             print(searches)
 
         if "who am i" in text.lower() or 'who i am' in text.lower():

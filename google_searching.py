@@ -33,15 +33,15 @@ def record_audio():
 
 # Function to convert text to audio
 
-def assistant_response(text):
-    print(text)
-    myobj = gTTS(text=text, lang='en', slow=False)
-
-    # Save converted audio to file
-
-    myobj.save('assistant_response.wav')
-
-    os.system('mpg321 -q assistant_response.wav')
+# def assistant_response(text):
+#     print(text)
+#     myobj = gTTS(text=text, lang='en', slow=False)
+#
+#     # Save converted audio to file
+#
+#     myobj.save('assistant_response.wav')
+#
+#     os.system('mpg321 -q assistant_response.wav')
 
 # Function for wake word
 
